@@ -1,0 +1,83 @@
+/* 	For buttons, but could be used for other
+	Items if the colors are consistent
+*/
+/* 	Solid orange hover,
+ *	Alternate orange hover fill */
+/*  Solid blue button color,
+ *	Alternate blue button outline color,
+ *	Alternate blue button text color */
+/* 	Solid blue button text color,
+ *	Alternate blue hover text,
+ *  Alternate orange hover text */
+/* 	Solid blue hover
+    Alternate blue hover fill */
+/*	Solid orange button color,
+    Alternate orange button outline */
+/* Alternate orange button text color */
+/* Addittional button colors */
+.lb-open body {
+  overflow: hidden;
+}
+.ctx-lightbox-overlay {
+  display: block;
+  background-color: #34383c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  visibility: hidden;
+  z-index: 999999;
+}
+.lb-open .ctx-lightbox-overlay {
+  visibility: visible;
+}
+.ctx-lightbox {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: 9999999;
+}
+.lb-open .ctx-lightbox {
+  visibility: visible;
+}
+.ctx-lightbox .ctx-lightbox-close {
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 99999999;
+}
+.lb-loading .ctx-lightbox .ctx-lightbox-close {
+  display: none;
+}
+.ctx-lightbox .ctx-lightbox-close span {
+  font-size: 2.5rem;
+  color: #999;
+}
+
+.ctx-lightbox .ctx-lightbox-content {
+  padding: 1em 2%;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+.ctx-lightbox .ctx-lightbox-content .flex-video {
+  margin-top: 5rem;
+}
+@media only screen and (min-width: 500px) {
+  .ctx-lightbox .ctx-lightbox-content {
+    padding: 1em 5%;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .ctx-lightbox .ctx-lightbox-content {
+    padding: 1em 20%;
+  }
+}

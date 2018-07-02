@@ -1,0 +1,841 @@
+<!-- <!DOCTYPE html> -->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html class=""> <!--<![endif]-->
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="Search more than 25,000 products demonstrating Citrix compatibility in the Citrix Ready Marketplace">
+    <!-- <link rel="stylesheet" href="css/foundation.css" /> -->
+    <link rel="stylesheet" href="css/master.83a05690413e28f76a11f742af16b4b8.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script> var dataLang='en-us',pageLang='en-us'; </script>
+<script>
+    var readyMarketplace = window.readyMarketplace || {};
+    readyMarketplace.lang = readyMarketplace.lang || {};
+    readyMarketplace.lang.common = {
+        '': '',
+        colon: ': ',
+        comma: ', ',
+        sizeGB: '%sGB',
+        sizeMB: '%sMB',
+        sizeKB: '%sKB',
+        actions: 'Actions',
+        add: 'Add',
+        addproduct: 'Create product',
+        addapp: 'Create app',
+        change: 'Change',
+        close: 'Close',
+        cancel: 'Cancel',
+        compatibility: 'Compatibility',
+        refresh: 'Refresh',
+        reload: 'Reload',
+        edit: 'Edit',
+        save: 'Save',
+        update: 'Update',
+        ok: 'Ok',
+        delete: 'Delete',
+        remove: 'Remove',
+        preview: 'Preview',
+        viewLarge: 'View large',
+        selectone: 'Select one',
+        selectall: 'Select all',
+        next: 'Next',
+        previous: 'Previous',
+        size: 'Size',
+        name: 'Name',
+        date: 'Date',
+        title: 'Title',
+        url: 'URL',
+        filename: 'Filename',
+        featured: 'Featured',
+        image: 'Image',
+        description: 'Description',
+        testcaseid: 'Test Case ID',
+        priority: 'Priority',
+        configuration: 'Configuration',
+        testscript: 'Test script',
+        resources: 'Resources',
+        messages: {
+            exceedMaxItemsAllowed: 'Your item(s) exceeds maximum item(s) allowed.',
+            alreadyExists: 'The item you try to add already exists.',
+            fileAlreadyExists: 'The file you try to upload already exists.',
+            pleaseSelectOne: 'Please select an item.',
+            pleaseSelectMadatory: 'Please select mandatory/required field.',
+            failedToSubmitForm: 'Failed to submit form',
+            uploadInvalidFileFormat: 'You try to upload invalid file format.',
+            selectCompatibilityProduct: 'Select a compatibility product.',
+            deleteItemConfirmMsg: 'Are you sure you want to delete this item?',
+            deleteTestKitConfirmMsg: 'Are you sure you want to delete this test kit?',
+            testKitPublishedOrSubmittedForApproval: 'Your test kit has been saved. To complete the submission process for approval, please click on "Submit for approval".'
+        },
+        formSubmissionFailed: 'Failed to submit the form.',
+        assetUploadNewImg: 'Upload new image',
+        assetFile: 'Upload/add file here...',
+        assetLink: 'Upload/add link here...',
+        yes: 'Yes',
+        no: 'No',
+        na: 'NA',
+        citrixProduct: 'Citrix Product',
+        citrixProductVersion: 'Citrix Product Version',
+        citrixProductCategory: 'Citrix Product Category',
+        selectProduct: 'Select Product',
+        selectProductVersion: 'Select Product Version',
+        selectProductCategory: 'Select Product Category',
+        productApprovalStatus: 'Product Approval',
+        appApprovalStatus: 'App Approval',
+        testKitApprovalStatus: 'Test Kit Approval',
+        pending: 'Pending',
+        missingRequiredData: 'Required data is missing.',
+        noItem: 'There is no item.',
+        status: 'Status',
+        savedraft: 'Draft',
+        forapproval: 'Wait for approval',
+        approved: 'Published',
+        rejected: 'Rejected',
+        approve: 'Approve',
+        reject: 'Reject',
+        prodType: 'Type',
+        product: 'Citrix Ready Product',
+        app: 'Worx Verified',
+        update_at: 'Update At (GMT)',
+        published: 'Published',
+        is_published: 'Published?',
+        company: 'Company',
+        platform: 'Platform',
+        submitas: 'Submitted',
+        version: 'Version',
+        delete: 'Delete',
+        saved: 'The details have been successfully saved.',
+        removed: 'Successfully removed.',
+        deleted: 'Successfully deleted.',
+        failedToSave: 'Failed to save.',
+        failed: 'Failed. Some error occurred.',
+        testkitstatus: {
+            saveandexit: 'In Progress',
+            forapproval: 'Pending Approval',
+            approved: 'Approved',
+            rejected: 'In Progress',
+            rejectedGenericMsg: 'This test kit was rejected.',
+            rejectedMsgPfx: 'This test kit was rejected due to:',
+            rejectedMsgSfx: "Please correct it and resubmit for approval. If you have any questions, please contact <a href='mailto:CitrixReady@citrix.com'>CitrixReady@citrix.com</a> for support.",
+            rejectReasonFieldLabel: 'Please provide the reason for rejection'
+        },
+        profilestatus: {
+            new: 'New',
+            pendingapproval: 'Pending approval',
+            declined: 'Declined',
+            rejected: 'Declined',
+            offline: 'Off Line',
+            update: 'Update',
+            live: 'Live'
+        },
+        urlFieldNote: 'Please use http:// or https://',
+        maxFileSizeNote: 'Files must be less than 15 MB in size.'
+    };
+    readyMarketplace.lang.formvalidator = {
+        errorTitle: 'Form submission failed!',
+        requiredFields: 'You have not answered all required fields',
+        badTime: 'You have not given a correct time',
+        badEmail: 'You have not given a correct e-mail address',
+        badTelephone: 'You have not given a correct phone number',
+        badSecurityAnswer: 'You have not given a correct answer to the security question',
+        badDate: 'You have not given a correct date',
+        lengthBadStart: 'You must give an answer between ',
+        lengthBadEnd: '  characters',
+        lengthTooLongStart: 'You have given an answer longer than ',
+        lengthTooShortStart: 'You have given an answer shorter than ',
+        notConfirmed: 'Values could not be confirmed',
+        badDomain: 'Incorrect domain value',
+        badUrl: 'Incorrect information provided. Please verify all the fields.',
+        badCustomVal: 'You gave an incorrect answer',
+        badInt: 'The answer you gave was not a correct number',
+        badSecurityNumber: 'Your social security number was incorrect',
+        badUKVatAnswer: 'Incorrect UK VAT Number',
+        badStrength: 'The password is not strong enough',
+        badNumberOfSelectedOptionsStart: 'You have to choose at least ',
+        badNumberOfSelectedOptionsEnd: '  answers',
+        badAlphaNumeric: 'The answer you gave must contain only alphanumeric characters ',
+        badAlphaNumericExtra: '  and ',
+        wrongFileSize: 'The file you are trying to upload is too large',
+        wrongFileType: 'The file you are trying to upload is of wrong type',
+        groupCheckedRangeStart: 'Please choose between ',
+        groupCheckedTooFewStart: 'Please choose at least ',
+        groupCheckedTooManyStart: 'Please choose a maximum of ',
+        groupCheckedEnd: '  item(s)'
+    };
+    readyMarketplace.lang.productForm = {
+        notes: 'Notes',
+        uploadLogVideo: 'Upload Log/Video',
+        results: 'Results',
+        testPassed: 'Test Passed',
+        testFailed: 'Test Failed',
+        couldNotPerform: 'Could not perform',
+        adminnotes: 'Admin Notes'
+    };
+    readyMarketplace.lang.appForm = readyMarketplace.lang.productForm;
+</script><script type="text/javascript" src="https://citrixready.citrix.com/etc/designs/ready/master.bed922a16a1566ce765bd5df55340fdb.js"></script>
+<script type="text/javascript" src="https://citrixready.citrix.com/etc/designs/ready/component.44ba0ee02f80a80dc522993b4eab6d20.js"></script>
+<script type="text/javascript" src="https://citrixready.citrix.com/etc/designs/ready/production/js/adrum.js"></script>
+    
+
+    <script type="text/javascript" src="https://citrixready.citrix.com//assets.adobedtm.com/e0903a2aaadb93ceed6a5acaaacbb9b9846eaa41/satelliteLib-df500103c9b59b7c02b400a29643c618f8d9e71b.js"></script>
+    
+    <link rel="icon" type="image/vnd.microsoft.icon" href="https://citrixready.citrix.com/etc/designs/ready/master/images/icon-favicon.png">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://citrixready.citrix.com/etc/designs/ready/master/images/icon-favicon.png">
+    
+    <link type="text/css" rel="stylesheet" href="https://s3.amazonaws.com/citrix-cdn/can.cdn/marketing/assets/fonts/citrix-fonts.css"/>
+    <title>Citrix Ready - Citrix Cloud with Azure verification program</title>
+</head>
+<body>
+    
+    <div id="rdy-topnav" role="navigation">
+<a id="rdy-topmenuicon" href="#" title="Navigation"><span></span><i></i></a>
+<div class="row">
+  <div class="large-12 columns">
+    <div class="expanded-menu">
+        
+            <a href="https://citrixready.citrix.com/login.html">Partner Login</a>
+            <span class="topnav-separator">|</span>
+            <a href="http://www.citrix.com/partner-programs/citrix-ready.html">Register</a>
+        
+        <span class="topnav-separator">|</span>
+        <div class="rdy-languages">
+            <span class="rdy-lang-label">View products in</span>
+            <div class="rdySelectWrapper">
+                <select class="rdy-lang-select" name="country" onchange="readyMarketplace.footer.switchLang(this.value, '/', '/category-results.html?category=all')">
+                    
+                        <option value="en-us" selected>English</option>
+                    
+                        <option value="zh-cn" >中文</option>
+                    
+                        <option value="ja-jp" >日本語</option>
+                    
+                </select>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+    </div>
+    <div id="rdy-header">
+        <div class="row">
+            <div class="small-12 large-12 columns">
+                
+<div class="clear"></div>
+<div class="row">
+    <div class="rdy-logo columns large-5 medium-12 small-12">
+<a href="https://citrixready.citrix.com/" title="Citrix Ready logo"><img src="https://citrixready.citrix.com/etc/designs/ready/images/ready-logo.png" alt="Citrix Ready logo"/></a>
+    </div> <!-- Closing rdy-categories -->
+    <div class="columns large-7 medium-12 small-12">
+        <div class="rdy-categories columns">
+ <ul class="nav" swapid="rdynavCategory">
+    <li>
+      <span class="icon-arrow-down2"></span>
+        <a class="browse-main" href="#">Browse by...</a>
+        <ul swapid="browse-category-main" style="margin-left: 0px;">
+          <li swapid="c1-all-categories">
+            <a href="https://citrixready.citrix.com/category-results.html?category=all&lang=en-us">
+                  <span class="rdy-cat-name2">All Categories</span>
+                </a>
+          </li>
+          
+            <li swapid="c1-applications" class="">
+            
+              
+                <a href="#" onclick="return false;">
+                            <span class="rdy-cat-name">Applications</span>
+                            <span class="icon-arrow-down2"></span><span class="icon-uniE608"></span><span class="icon-arrow-up2"></span>
+                        </a>
+                        <ul id="one-col" swapid="c1-applications-ul">
+                          <li class="rdy-cat1-header" swapid="c1-applications-ul-li" class="">
+                                <a href="https://citrixready.citrix.com/category-results.html?category=c1-applications&lang=en-us">
+                                    <span swapid="c1-applications-span" class="navlink">Applications</span>
+                                </a>
+                            </li>
+                                                      
+                              <li swapid="c2-desktop-applications" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-applications/c2-desktop-applications&lang=en-us">
+                                      <span swapid="c2-desktop-applications-span" class="navlink">Desktop Applications</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-network-applications" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-applications/c2-network-applications&lang=en-us">
+                                      <span swapid="c2-network-applications-span" class="navlink">Network Applications</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-mobile-applications" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-applications/c2-mobile-applications&lang=en-us">
+                                      <span swapid="c2-mobile-applications-span" class="navlink">Mobile Applications</span>
+                                  </a>
+                              </li>                        
+                          
+                        </ul>
+              
+              
+            
+            </li>
+          
+            <li swapid="c1-endpoints" class="">
+            
+              
+                <a href="#" onclick="return false;">
+                            <span class="rdy-cat-name">Endpoints</span>
+                            <span class="icon-arrow-down2"></span><span class="icon-uniE608"></span><span class="icon-arrow-up2"></span>
+                        </a>
+                        <ul id="one-col" swapid="c1-endpoints-ul">
+                          <li class="rdy-cat1-header" swapid="c1-endpoints-ul-li" class="">
+                                <a href="https://citrixready.citrix.com/category-results.html?category=c1-endpoints&lang=en-us">
+                                    <span swapid="c1-endpoints-span" class="navlink">Endpoints</span>
+                                </a>
+                            </li>
+                                                      
+                              <li swapid="c2-desktops" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-endpoints/c2-desktops&lang=en-us">
+                                      <span swapid="c2-desktops-span" class="navlink">Desktops</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-laptops" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-endpoints/c2-laptops&lang=en-us">
+                                      <span swapid="c2-laptops-span" class="navlink">Laptops</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-thin-clients" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-endpoints/c2-thin-clients&lang=en-us">
+                                      <span swapid="c2-thin-clients-span" class="navlink">Thin Clients</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-chrome-devices" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-endpoints/c2-chrome-devices&lang=en-us">
+                                      <span swapid="c2-chrome-devices-span" class="navlink">Chrome Devices</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-smartphones" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-endpoints/c2-smartphones&lang=en-us">
+                                      <span swapid="c2-smartphones-span" class="navlink">SmartPhones</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-tablets" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-endpoints/c2-tablets&lang=en-us">
+                                      <span swapid="c2-tablets-span" class="navlink">Tablets</span>
+                                  </a>
+                              </li>                        
+                          
+                        </ul>
+              
+              
+            
+            </li>
+          
+            <li swapid="c1-integrated-systems" class="">
+            
+              
+                <a href="#" onclick="return false;">
+                            <span class="rdy-cat-name">Integrated Systems</span>
+                            <span class="icon-arrow-down2"></span><span class="icon-uniE608"></span><span class="icon-arrow-up2"></span>
+                        </a>
+                        <ul id="one-col" swapid="c1-integrated-systems-ul">
+                          <li class="rdy-cat1-header" swapid="c1-integrated-systems-ul-li" class="">
+                                <a href="https://citrixready.citrix.com/category-results.html?category=c1-integrated-systems&lang=en-us">
+                                    <span swapid="c1-integrated-systems-span" class="navlink">Integrated Systems</span>
+                                </a>
+                            </li>
+                                                      
+                              <li swapid="c2-converged-infrastructure" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-integrated-systems/c2-converged-infrastructure&lang=en-us">
+                                      <span swapid="c2-converged-infrastructure-span" class="navlink">Converged Infrastructure</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-converged-hardwares" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-integrated-systems/c2-converged-hardwares&lang=en-us">
+                                      <span swapid="c2-converged-hardwares-span" class="navlink">Converged Hardwares</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-cloud-orchestration" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-integrated-systems/c2-cloud-orchestration&lang=en-us">
+                                      <span swapid="c2-cloud-orchestration-span" class="navlink">Cloud Orchestration</span>
+                                  </a>
+                              </li>                        
+                          
+                        </ul>
+              
+              
+            
+            </li>
+          
+            <li swapid="c1-peripherals" class="">
+            
+              
+                <a href="#" onclick="return false;">
+                            <span class="rdy-cat-name">Peripherals</span>
+                            <span class="icon-arrow-down2"></span><span class="icon-uniE608"></span><span class="icon-arrow-up2"></span>
+                        </a>
+                        <ul id="one-col" swapid="c1-peripherals-ul">
+                          <li class="rdy-cat1-header" swapid="c1-peripherals-ul-li" class="">
+                                <a href="https://citrixready.citrix.com/category-results.html?category=c1-peripherals&lang=en-us">
+                                    <span swapid="c1-peripherals-span" class="navlink">Peripherals</span>
+                                </a>
+                            </li>
+                                                      
+                              <li swapid="c2-audio-devices" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-peripherals/c2-audio-devices&lang=en-us">
+                                      <span swapid="c2-audio-devices-span" class="navlink">Audio Devices</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-drawing-tablets" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-peripherals/c2-drawing-tablets&lang=en-us">
+                                      <span swapid="c2-drawing-tablets-span" class="navlink">Drawing Tablets</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-biometric-devices" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-peripherals/c2-biometric-devices&lang=en-us">
+                                      <span swapid="c2-biometric-devices-span" class="navlink">Biometric Devices</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-foot-switches" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-peripherals/c2-foot-switches&lang=en-us">
+                                      <span swapid="c2-foot-switches-span" class="navlink">Foot Switches</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-signature-pads" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-peripherals/c2-signature-pads&lang=en-us">
+                                      <span swapid="c2-signature-pads-span" class="navlink">Signature Pads</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-smart-tokens" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-peripherals/c2-smart-tokens&lang=en-us">
+                                      <span swapid="c2-smart-tokens-span" class="navlink">Smart Tokens</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-smart-cards" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-peripherals/c2-smart-cards&lang=en-us">
+                                      <span swapid="c2-smart-cards-span" class="navlink">Smart Cards</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-flash-drives" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-peripherals/c2-flash-drives&lang=en-us">
+                                      <span swapid="c2-flash-drives-span" class="navlink">Flash Drives</span>
+                                  </a>
+                              </li>                        
+                          
+                        </ul>
+              
+              
+            
+            </li>
+          
+            <li swapid="c1-printers---scanners" class="">
+            
+              
+                <a href="#" onclick="return false;">
+                            <span class="rdy-cat-name">Printers & Scanners</span>
+                            <span class="icon-arrow-down2"></span><span class="icon-uniE608"></span><span class="icon-arrow-up2"></span>
+                        </a>
+                        <ul id="one-col" swapid="c1-printers---scanners-ul">
+                          <li class="rdy-cat1-header" swapid="c1-printers---scanners-ul-li" class="">
+                                <a href="https://citrixready.citrix.com/category-results.html?category=c1-printers---scanners&lang=en-us">
+                                    <span swapid="c1-printers---scanners-span" class="navlink">Printers & Scanners</span>
+                                </a>
+                            </li>
+                                                      
+                              <li swapid="c2-printers" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-printers---scanners/c2-printers&lang=en-us">
+                                      <span swapid="c2-printers-span" class="navlink">Printers</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-scanners" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-printers---scanners/c2-scanners&lang=en-us">
+                                      <span swapid="c2-scanners-span" class="navlink">Scanners</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-printer-drivers" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-printers---scanners/c2-printer-drivers&lang=en-us">
+                                      <span swapid="c2-printer-drivers-span" class="navlink">Printer Drivers</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-printing-solutions" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-printers---scanners/c2-printing-solutions&lang=en-us">
+                                      <span swapid="c2-printing-solutions-span" class="navlink">Printing Solutions</span>
+                                  </a>
+                              </li>                        
+                          
+                        </ul>
+              
+              
+            
+            </li>
+          
+            <li swapid="c1-servers" class="">
+            
+              
+                <a href="#" onclick="return false;">
+                            <span class="rdy-cat-name">Servers</span>
+                            <span class="icon-arrow-down2"></span><span class="icon-uniE608"></span><span class="icon-arrow-up2"></span>
+                        </a>
+                        <ul id="one-col" swapid="c1-servers-ul">
+                          <li class="rdy-cat1-header" swapid="c1-servers-ul-li" class="">
+                                <a href="https://citrixready.citrix.com/category-results.html?category=c1-servers&lang=en-us">
+                                    <span swapid="c1-servers-span" class="navlink">Servers</span>
+                                </a>
+                            </li>
+                                                      
+                              <li swapid="c2-server-solutions" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-servers/c2-server-solutions&lang=en-us">
+                                      <span swapid="c2-server-solutions-span" class="navlink">Server Solutions</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-server-components" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-servers/c2-server-components&lang=en-us">
+                                      <span swapid="c2-server-components-span" class="navlink">Server Components</span>
+                                  </a>
+                              </li>                        
+                          
+                        </ul>
+              
+              
+            
+            </li>
+          
+            <li swapid="c1-services" class="">
+            
+              
+                <a href="#" onclick="return false;">
+                            <span class="rdy-cat-name">Services</span>
+                            <span class="icon-arrow-down2"></span><span class="icon-uniE608"></span><span class="icon-arrow-up2"></span>
+                        </a>
+                        <ul id="one-col" swapid="c1-services-ul">
+                          <li class="rdy-cat1-header" swapid="c1-services-ul-li" class="">
+                                <a href="https://citrixready.citrix.com/category-results.html?category=c1-services&lang=en-us">
+                                    <span swapid="c1-services-span" class="navlink">Services</span>
+                                </a>
+                            </li>
+                                                      
+                              <li swapid="c2-service-providers" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-services/c2-service-providers&lang=en-us">
+                                      <span swapid="c2-service-providers-span" class="navlink">Service Providers</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-virtual-appliances" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-services/c2-virtual-appliances&lang=en-us">
+                                      <span swapid="c2-virtual-appliances-span" class="navlink">Virtual Appliances</span>
+                                  </a>
+                              </li>                        
+                          
+                        </ul>
+              
+              
+            
+            </li>
+          
+            <li swapid="c1-storage" class="">
+            
+              
+                <a href="#" onclick="return false;">
+                            <span class="rdy-cat-name">Storage</span>
+                            <span class="icon-arrow-down2"></span><span class="icon-uniE608"></span><span class="icon-arrow-up2"></span>
+                        </a>
+                        <ul id="one-col" swapid="c1-storage-ul">
+                          <li class="rdy-cat1-header" swapid="c1-storage-ul-li" class="">
+                                <a href="https://citrixready.citrix.com/category-results.html?category=c1-storage&lang=en-us">
+                                    <span swapid="c1-storage-span" class="navlink">Storage</span>
+                                </a>
+                            </li>
+                                                      
+                              <li swapid="c2-storage-controllers" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-storage/c2-storage-controllers&lang=en-us">
+                                      <span swapid="c2-storage-controllers-span" class="navlink">Storage Controllers</span>
+                                  </a>
+                              </li>                        
+                                                      
+                              <li swapid="c2-storage-solutions" class="">
+                                  <a href="https://citrixready.citrix.com/category-results.html?category=c1-storage/c2-storage-solutions&lang=en-us">
+                                      <span swapid="c2-storage-solutions-span" class="navlink">Storage Solutions</span>
+                                  </a>
+                              </li>                        
+                          
+                        </ul>
+              
+              
+            
+            </li>
+          
+        </ul>
+    </li>
+</ul>
+        </div> <!-- Closing rdy-categories -->
+        <div class="rdy-globalsearch columns">
+            
+
+
+
+
+
+
+
+
+<form class="rdy-globalsearchform" id="rdy-globalsearchform" method="get" action="/search.html">
+  <div class="rdy-searchinput-wrap columns">
+    <a href="javascript:void(0);" id="rdy-globalsearchclose">&times;</a>
+    <input type="text" name="search" id="rdy-globalsearchinput" placeholder="Search in All Categories" value="">
+  </div>
+  <div id="rdy-globalsearchsubmit">
+    <a href="javascript:void(0)" class="rdy-globalsearchbutton button postfix">
+      <span class="icon-search"></span>
+    </a>
+  </div>
+  <input type="hidden" name="-charset-" value="UTF-8"/>
+  <input type="hidden" name="category" value="all"/>
+    <input type="hidden" name="lang" value="en-us"/>
+</form>
+        </div><!-- Closing rdy-search -->
+    </div> <!-- Closing rdy-search -->
+</div>
+
+            </div>
+        </div>
+    </div>
+    <div id="rdy-container">
+        
+
+
+
+
+<div class="par parsys"><div class="html-embed section">
+
+
+
+
+
+
+<div class="bk-html-embed">
+
+<!-- Resource Library page content start-->
+
+<link rel="stylesheet" href="https://citrixready.citrix.com/content/dam/ready/assets/home/style.css" type="text/css"/>
+<link rel="stylesheet" href="css/programs-style.css?v=1.2" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="css/lightbox-content.css?v=1.0">
+<link rel="stylesheet" type="text/css" href="css/ctx-lightbox.css?v=1.0">
+<div class="conbtainer-fluid">
+    <div class="row">
+        <div class="small-12 large-12 columns rdy-resource-blocks-v2 rdy-resource-header-panel">
+             <ul class="tabs panel-overview-tabs" >
+                <li class="tab-title"><a href="secure-remote-access-program.html">Program Overview</a></li>
+                <li class="tab-title active"><a href="resources.html">Resource Library</a></li>
+            </ul>
+            <div class="tabs-content">
+                <div class="content active panel-resource" id="resource">
+                    <div class="row">
+                        <div class="small-12 large-12 medium-12 columns panel-resource-banner-content secure-remote-access">
+                            <div class="small-12 large-5 medium-5 columns banner-content"> 
+                                <div class="pgm-header">Secure Remote Access Program</div> 
+                                <div class="pgm-discription">Add an extra layer of security when you remotely access your apps and desktops</div> 
+                            </div>
+                            <div class="resource-banner">
+                                <img src="images/secure-remote-access-banner.png" alt="Resource Library">
+                            </div>
+                        </div>
+                        <div class="small-12 large-12 medium-12 columns panel-resource-content">
+                            <div class="small-12 large-3 medium-3 columns menu-block">
+                                <h1 class="menu-heading">Resource Library</h1>
+                                <div id="filter-display"></div>
+                                <div class="menu-items" id="options">
+                                    <div style="display: none">
+                                        <h3 >SOLUTION</h3>
+                                        <ul class="solution">
+                                            <li><a href="">All Solutions</a></li>
+                                            <li><a href="">Featured Solutions</a></li>
+                                            <li class="active"><a href="">New Technical Programs</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="close-menu"><img src="images/program-assets/sort-close.png" class="fa" width="30"></div>
+                                    <h2> <b>Filter</b> | <span id="assets-reset">Reset</span></h2>
+                                    <h3 >Security Type</h3>
+                                    <div class="option-set top_options" data-group="topic">
+                                        <ul class="topic-all filter-all">
+                                            <li>
+                                                <input id="topic-all" type="checkbox" value=".topic-all" data-f-type="all" class="all" data-a="all-topic"/><label for="topic-all">All Security Type</label>
+                                            </li>
+                                        </ul>
+                                        <ul class="top_options filter-data">
+                                            <li>
+                                                <input data-filter="Identity_and_Access_management" id="Identity_and_Access_management" type="checkbox" value=".Identity_and_Access_management" data-f-type="topic"> 
+                                                <label for="Identity_and_Access_management">Identity and Access</label>
+                                                <br>
+                                                <span style="margin-left: 23px; font-size: 14.4px;padding-left: 0px;">Management</span>
+                                                <span class="filter-count"></span>
+                                            </li>
+                                            <li>
+                                                <input data-filter="Application_Security" id="Application_Security" type="checkbox" value=".Application_Security" data-f-type="topic">
+                                                <label for="Application_Security">Application Security</label>
+                                                <span class="filter-count"></span>
+                                            </li>
+                                            <li>
+                                                <input data-filter="Data_Security" id="Data_Security" type="checkbox" value=".Data_Security" data-f-type="topic">
+                                                <label for="Data_Security">Data Security</label>
+                                                <span class="filter-count"></span>
+                                            </li>
+                                            <li>
+                                                <input data-filter="Network_Security" id="Network_Security" type="checkbox" value=".Network_Security" data-f-type="topic">
+                                                <label for="Network_Security">Network Security</label>
+                                                <span class="filter-count"></span>
+                                            </li>
+                                            <li>
+                                                <input data-filter="Monitoring_and_Response" id="Monitoring_and_Response" type="checkbox" value=".Monitoring_and_Response" data-f-type="topic">
+                                                <label for="Monitoring_and_Response">Monitoring and Response</label>
+                                                <span class="filter-count"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="option-set doc_option" data-group="document">
+                                        <h3>Document Type</h3>
+                                        <ul class="doc-all filter-all">
+                                            <li>
+                                                <input id="document-all" type="checkbox" value=".document-all" data-f-type="document" data-a="all-doc" class="all" ><label for="document-all">All Document</label>
+                                            </li>
+                                        </ul>
+                                        <ul class="doc-options filter-data">
+                                            <li>
+                                                <input data-filter="Blog" id="Blog" type="checkbox" value=".Blog" data-f-type="doc">
+                                                <label for="Blog">Blog</label>
+                                                <span class="filter-count"></span>
+                                            </li>
+                                           
+                                            <li>
+                                                <input data-filter="White_paper" id="White_paper" type="checkbox" value=".White_paper" data-f-type="doc">
+                                                    <label for="White_paper">White paper</label>
+                                                    <span class="filter-count"></span>
+                                            </li>
+                                            <li>
+                                                <input data-filter="Webinar" id="Webinar" type="checkbox" value=".Webinar" data-f-type="doc">
+                                                    <label for="Webinar">Webinar</label>
+                                                    <span class="filter-count"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="option-set p_option" data-group="product">
+                                        <h3>Citrix Product type</h3>
+                                        <ul class="product-all filter-all">
+                                            <li>
+                                                <input id="product-all" type="checkbox" value=".product-all" data-f-type="product" data-a="all-product" class="all" ><label for="product-all">All Product</label>
+                                            </li>
+                                        </ul>
+                                        <ul class="product-options filter-data">
+                                            <li>
+                                                <input data-filter="citrix_xenapp" id="citrix_xenapp" type="checkbox" value=".citrix_xenapp" data-f-type="product">
+                                                <label for="citrix_xenapp">Citrix XenApp</label>
+                                                <span class="filter-count"></span>
+                                            </li>
+                                            <li>
+                                                <input data-filter="citrix_xendesktop" id="citrix_xendesktop" type="checkbox" value=".citrix_xendesktop" data-f-type="product">
+                                                <label for="citrix_xendesktop">Citrix XenDesktop</label>
+                                                <span class="filter-count"></span>
+                                            </li>
+                                            <li>
+                                                <input data-filter="citrix_netscaler" id="citrix_netscaler" type="checkbox" value=".citrix_netscaler" data-f-type="product">
+                                                <label for="citrix_netscaler">Citrix NetScaler</label>
+                                                <span class="filter-count"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="small-12 large-9 medium-9 columns content-block">
+                                 <div class="row sort-search-content">
+                                    <div class="large-9 medium-8 small-8 columns search-box">
+                                        <div class="search">
+                                            <div class="large-11 medium-11 small-10 columns "><input type="text" placeholder="Search all assets" name="search" id="quicksearch" /></div>
+                                            <div class="large-1 medium-1 small-2 columns delete-search"><b>X</b></div>
+                                        </div>
+                                    </div>
+                                    <div class="large-3 medium-4 small-4 columns sort-box" id="sort-by">
+                                        
+                                        <div class="large-12 medium-12 small-12 columns sort-box-items">
+                                            <a class="button sort-btn" >Sort <span><img src="images/sort-icon.png"></span></a>
+                                            <a class="button filter-btn" id="show-menu" ><span><img src="images/filter-icon.png"></span> Filter</a>
+                                            <div class="sort_dropdown hidden">
+                                                <div class="close"><img src="images/program-assets/sort-close.png" class="fa" width="25"></div>
+                                                <div class="filter">Sort | <a href="javascript://" id="filter-reset" class="resetfilter">Reset</a></div>
+                                                <ul id="dwn_sort" class="items" data-dropdown-content tabindex="-1" aria-hidden="true" aria-autoclose="true" tabindex="-1">
+                                                    <li id="sort_date">
+                                                        <label class="container">Date
+                                                            <input id="date" type="checkbox" data-sort-by="date">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </li>
+                                                    <li id="sort_headline">
+                                                        <label class="container">Alphabetical Order
+                                                            <input id="headline" type="checkbox" data-sort-by="headline">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                           
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="filter-content ">
+                                    <div class="row">
+                                        <div class="large-10 medium-10 columns asset-count ">
+                                            <div style="font-size: 16px;"><span class="filter-count-main"></span> Resources</div>
+                                        </div>
+                                    </div>
+                                    <div class="row" id="container1" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--LIGHTBOX CONTENT -->
+<div class="ctx-content-lightbox" id="lightbox-webinar">
+    <div class="data">
+        <div class="content">
+                <div class="flex-video widescreen vimeo float-center webinar-video">
+                <iframe width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Resource Library page content end -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"
+integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+crossorigin="anonymous"></script>
+<script src="js/programs-custom.js?v=1.2"></script>
+<script src="js/isotope.min.js?v=1.1"></script>
+<script src="js/secure-remote-accss.js?v=1.2"></script>
+<script src="js/technical-program-filter1.js?v=1.1"></script>
+<script src="js/velocity.js?v=1.0"></script>
+<script src ="js/ctx-lightbox.js?v=1.0"></script>
+<script>
+    jQuery(document).foundation();
+</script>

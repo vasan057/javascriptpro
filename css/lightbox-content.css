@@ -1,0 +1,65 @@
+/* 	For buttons, but could be used for other
+	Items if the colors are consistent
+*/
+/* 	Solid orange hover,
+ *	Alternate orange hover fill */
+/*  Solid blue button color,
+ *	Alternate blue button outline color,
+ *	Alternate blue button text color */
+/* 	Solid blue button text color,
+ *	Alternate blue hover text,
+ *  Alternate orange hover text */
+/* 	Solid blue hover
+    Alternate blue hover fill */
+/*	Solid orange button color,
+    Alternate orange button outline */
+/* Alternate orange button text color */
+/* Addittional button colors */
+.ctx-content-lightbox {
+  position: absolute;
+  left: -99999px;
+  top: 0;
+}
+.ctx-content-lightbox .label {
+  display: none;
+}
+.aem-author .ctx-content-lightbox {
+  border: 3px solid #4eb0ed;
+  margin-top: 40px;
+  position: relative;
+  left: 0;
+}
+.aem-author .ctx-content-lightbox .data {
+  display: none;
+}
+.aem-author .ctx-lb-show .ctx-content-lightbox .data {
+  display: block;
+}
+.aem-author .ctx-content-lightbox .label {
+  display: block;
+  background-color: #4eb0ed;
+  padding: 5px;
+  color: #fff;
+}
+.aem-author .ctx-content-lightbox .label span {
+  float: right;
+  display: block;
+  color: #fff;
+  background-color: #3789bc;
+  font-size: 0.65rem;
+  padding: 4px;
+  margin-top: 1px;
+  border-radius: 3px;
+}
+.aem-author .ctx-content-lightbox .inverted {
+  background-color: #333;
+}
+.ctx-lightbox-content .content {
+  padding: 0 15px 15px 15px;
+}
+.ctx-lightbox .ctx-lightbox-content .content {
+  padding-top: 4rem;
+}
+.aem-author .ctx-content-lightbox .content {
+  padding: 0 10px;
+}
